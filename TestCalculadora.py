@@ -20,11 +20,25 @@ class TestCalculadora(unittest.TestCase):
 	   	resultado = self.calc.suma(5,5)
 		self.assertEqual(10,resultado)
 
+	def test_resta_de_9_menos_3(self):
+		resultado = self.calc.resta(9,3)
+		self.assertEqual(6,resultado)
+
+	def test_resta_de_50_menos_25(self):
+		resultado = self.calc.resta(50,25)
+		self.assertEqual(25,resultado)
+
+	def test_resta_de_10_menos_10(self):
+		resultado = self.calc.resta(10,10)
+		self.assertEqual(0,resultado)
+
 class Calculadora():
 
 	def suma(self,num1,num2):
 		return num1+num2
 		
+	def resta(self,num1,num2):
+	    return num1-num2
 
 if __name__ == '__main__':
 	unittest.main()
